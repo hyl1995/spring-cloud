@@ -1,0 +1,9 @@
+appKey: "appKey"
+appSecret: "appSecret"
+bucket: "bucket"
+endPoint: "endPoint"
+
+#appKey="appKey"
+#appSecret="appSecret"
+#bucket="bucket"
+#endPoint="endPoint"

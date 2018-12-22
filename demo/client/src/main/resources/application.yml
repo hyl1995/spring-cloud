@@ -1,0 +1,14 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:8761/eureka/
+server:
+  port: 8762
+spring:
+  aop:
+    auto: true
+    proxy-target-class: true
+  application:
+    name: client
+  profiles:
+    active: dev, core-dev
