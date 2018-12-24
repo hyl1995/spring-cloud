@@ -3,10 +3,12 @@ eureka:
     serviceUrl:
       defaultZone: http://localhost:8761/eureka/
 server:
-  port: 8764
+  port: 8763
 spring:
   application:
     name: client
+  profiles:
+    active: dev, core-dev
   sleuth:
     sampler:
       probability: 1.0 # 将采样比例设置为 1.0，也就是全部都需要。默认是 0.1
