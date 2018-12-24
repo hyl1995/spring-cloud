@@ -57,7 +57,7 @@ public class WebExceptionAspect {
         try {
             writer = response.getWriter();
 
-            writer.print((content == null) ? "" : content);
+            writer.print((content == null) ? "" : "切面异常输出："+content);
             writer.flush();
             writer.close();
         } catch (IOException e) {

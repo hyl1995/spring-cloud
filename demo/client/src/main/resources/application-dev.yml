@@ -4,3 +4,19 @@ spring:
     username: root
     password: 123456
     driverClassName: com.mysql.cj.jdbc.Driver
+
+## 原application.yml配置内容
+#eureka:
+#  client:
+#    serviceUrl:
+#      defaultZone: http://localhost:8761/eureka/
+#server:
+#  port: 8762
+#spring:
+#  aop:
+#    auto: true
+#    proxy-target-class: true
+#  application:
+#    name: client
+#  profiles:
+#    active: dev, core-dev

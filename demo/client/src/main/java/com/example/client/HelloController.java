@@ -6,6 +6,7 @@ import com.example.core.Result;
 import com.example.core.config.ParamConfig;
 import com.example.core.apiconf.ApiVersion;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.cloud.context.config.annotation.RefreshScope;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -15,6 +16,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 @RestController
+@RefreshScope
 //@ApiVersion(1)
 //@RequestMapping("/client/{version}")
 public class HelloController {
@@ -30,7 +32,7 @@ public class HelloController {
         json.put("result", "hi! Here is port:" +port);
         Map<String, Object> map = new HashMap<>();
         map.put("result", "hi! Here is port:" +port);
-        return new Result(true, map);
+        return new Result(true, "hi! Here is port:" +port);
     }
 
     @RequestMapping(value = "/index",method = RequestMethod.GET)
@@ -39,6 +41,6 @@ public class HelloController {
         json.put("result", "这里是服务提供中心!");
         Map<String, Object> map = new HashMap<>();
         map.put("result", "这里是服务提供中心!");
-        return new Result(true, map);
+        return new Result(true, "这里是服务提供中心!");
     }
 }

@@ -58,4 +58,5 @@ public class Result<T> implements Serializable {
                 ", data=" + data +
                 '}';
     }
+
 }
