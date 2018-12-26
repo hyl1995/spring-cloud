@@ -1,5 +1,9 @@
 server:
   port: 8888
+#  maxHttpHeaderSize: 10240000 #防止请求头过大而报错
+#  tomcat:
+#    maxHttpHeaderSize: 10240000 #防止请求头过大而报错
+#    maxHttpPostSize: 10240000
 spring:
   application:
     name: config
@@ -18,8 +22,8 @@ spring:
       trace:
         enabled: true
       enabled: true
-    trace: #开启/httptrace端点
-      enabled: true
+#    trace: #开启/httptrace端点
+#      enabled: true
   rabbitmq:
     host: localhost
     port: 5672

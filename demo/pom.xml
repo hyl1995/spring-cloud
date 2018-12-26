@@ -15,7 +15,6 @@
         <module>gateway</module>
         <module>feign</module>
         <module>config</module>
-        <module>zipkin</module>
     </modules>
 
     <name>demo</name>
@@ -89,7 +88,12 @@
                 <exclusions>
                 </exclusions>
             </dependency>
-
+            <!--数据库连接-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
             <dependency>
                 <groupId>mysql</groupId>
                 <artifactId>mysql-connector-java</artifactId>
@@ -101,11 +105,7 @@
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter</artifactId>
-                <version>${mybatis.version}</version>
-            </dependency>
+
             <!-- 切面引入 -->
             <dependency>
                 <groupId>org.aspectj</groupId>
