@@ -1,20 +1,19 @@
 server:
-  port: 8761
+  port: 8888
 spring:
+  application:
+    name: register
   profiles:
-    active: dev,core-dev
+    active: core-dev
 eureka:
-  dashborad:
-    enabled: true
-    path: /
   server:
-    enable-self-preservation: false
+    enable-self-preservation: true
   instance:
-    preferIpAddress: true
+    prefer-ip-address: true
     hostname: ${spring.cloud.client.ip-address}
-    instanceId: ${spring.cloud.client.ip-address}:${server.port}
+    instance-id: ${spring.cloud.client.ip-address}:${server.port}
   client:
-    registerWithEureka: false
-    fetchRegistry: false
-    serviceUrl:
+    register-with-eureka: false
+    fetch-registry: false
+    service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
