@@ -2,6 +2,6 @@ eureka:
   instance:
     hostname: ${spring.cloud.client.ip-address}
     instanceId: ${spring.cloud.client.ip-address}:${server.port}
-spring:
-  profiles:
-    active: core-dev
+# spring:
+#   profiles:
+#     active: core-dev
