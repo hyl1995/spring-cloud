@@ -4,4 +4,4 @@ spring:
   application:
     name: index
   profiles:
-    include: dev, ../../core-dev
+    include: dev, core-dev
