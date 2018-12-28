@@ -4,4 +4,4 @@ spring:
   application:
     name: index
   profiles:
-    active: dev
+    active: dev, core-dev
