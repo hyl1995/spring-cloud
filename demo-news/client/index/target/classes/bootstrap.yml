@@ -1,7 +1,7 @@
 spring:
   cloud:
     config:
-      name: index,eureka,database
+      name: index,eureka,database,redis
       label: master
       discovery:
         enabled: true

@@ -15,6 +15,9 @@ public class Result<T> implements Serializable {
     public Result(boolean success) {
         this.success = success;
     }
+    public Result(T data){
+        this.data = data;
+    }
 
     public Result(boolean success, T data) {
         this.success = success;
