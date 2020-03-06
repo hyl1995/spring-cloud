@@ -1,9 +1,0 @@
-com\example\feign\config\FeignByJacksonConfig$PhpMappingJackson2HttpMessageConverter.class
-com\example\feign\Application.class
-com\example\feign\config\FeignByJacksonConfig$1.class
-com\example\feign\config\WxMessageConverter.class
-com\example\feign\config\FeignByJacksonConfig.class
-com\example\feign\ApiServiceError.class
-com\example\feign\ApiController.class
-com\example\feign\ApiService.class
-com\example\feign\config\FeignConfig.class
