@@ -9,6 +9,7 @@ spring:
     bus: #消息总线
       trace:
         enable: true
+      enabled: true
     config:
       server:
         git:
