@@ -3,6 +3,10 @@ server:
 spring:
   application:
     name: eurekaclient
+  cloud:
+    bus: #消息总线
+      trace:
+        enable: true
 management:
   endpoints:
     web:
