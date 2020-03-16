@@ -10,7 +10,7 @@ spring:
       server:
         git:
           uri: https://github.com/hyl1995/spring-cloud.git #配置git仓库地址
-          searchPaths: 第09课/config #配置仓库路径
+          searchPaths: config-file #配置仓库路径
           username: 592443616@qq.com #访问git仓库的用户名
           password: Hyl_For_2018615 #访问git仓库的用户密码
       label: master #配置仓库的分支
