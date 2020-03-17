@@ -14,6 +14,6 @@ public class HelloController {
 
     @RequestMapping("index")
     public String index(){
-        return "Hello World!,端口："+port;
+        return "hby专属接口!,端口："+port;
     }
 }
