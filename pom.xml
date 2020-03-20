@@ -8,12 +8,12 @@
     <artifactId>spring-cloud</artifactId>
     <version>1.0-SNAPSHOT</version>
     <modules>
-        <module>eurekaserver</module>
-        <module>eurekaclient</module>
+        <module>common</module>
+        <module>eureka</module>
         <module>gateway</module>
         <module>feign</module>
         <module>config</module>
-        <module>common</module>
+        <module>eurekaclient</module>
     </modules>
 
     <packaging>pom</packaging>
