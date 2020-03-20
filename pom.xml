@@ -13,7 +13,7 @@
         <module>gateway</module>
         <module>feign</module>
         <module>config</module>
-        <module>eurekaclient</module>
+        <module>client</module>
     </modules>
 
     <packaging>pom</packaging>

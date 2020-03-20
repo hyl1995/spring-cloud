@@ -1,8 +1,8 @@
 server:
-  port: 8763
+  port: 8764
 spring:
   application:
-    name: eurekaclient
+    name: user
   cloud:
     bus: #消息总线
       trace:

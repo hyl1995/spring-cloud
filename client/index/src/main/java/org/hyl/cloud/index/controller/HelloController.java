@@ -1,4 +1,4 @@
-package org.hyl.cloud.eurekaclient.controller;
+package org.hyl.cloud.index.controller;
 
 import org.hyl.cloud.common.util.DistributedLockHandler;
 import org.hyl.cloud.common.util.Lock;

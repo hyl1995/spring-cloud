@@ -1,0 +1,22 @@
+server:
+  port: 8763
+spring:
+  application:
+    name: index
+  cloud:
+    bus: #消息总线
+      trace:
+        enable: true
+      enabled: true
+#  zipkin: #指定zipkinServer的路径 使用消息队列后则不需要
+#    base-url: http://localhost:9411
+#    sender:
+#      type: web
+  sleuth:
+    sampler:
+      probability: 1 #用来指定采样请求的百分比（默认为 0.1，即 10%）
+management:
+  endpoints:
+    web:
+      exposure:
+        include: refresh,health,info
