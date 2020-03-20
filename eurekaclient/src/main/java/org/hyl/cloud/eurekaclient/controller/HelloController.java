@@ -1,6 +1,5 @@
 package org.hyl.cloud.eurekaclient.controller;
 
-import org.hyl.cloud.common.util.DistributedLock;
 import org.hyl.cloud.common.util.DistributedLockHandler;
 import org.hyl.cloud.common.util.Lock;
 import org.hyl.cloud.common.util.redisson.AquiredLockWorker;
@@ -75,5 +74,4 @@ public class HelloController {
 //        }
         return "hello world!";
     }
-}
 }
