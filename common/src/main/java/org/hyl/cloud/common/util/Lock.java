@@ -1,4 +1,4 @@
-package org.hyl.cloud.common;
+package org.hyl.cloud.common.util;
 
 public class Lock {
     private String name;

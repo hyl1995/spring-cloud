@@ -1,4 +1,4 @@
-package org.hyl.cloud.common;
+package org.hyl.cloud.common.util;
 
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -9,6 +9,9 @@ import org.springframework.util.StringUtils;
 
 import java.util.concurrent.TimeUnit;
 
+/**
+ * redis分布式锁
+ */
 @Component
 @Slf4j
 public class DistributedLockHandler {

@@ -1,7 +1,10 @@
 package org.hyl.cloud.eurekaclient.controller;
 
-import org.hyl.cloud.common.DistributedLockHandler;
-import org.hyl.cloud.common.Lock;
+import org.hyl.cloud.common.util.DistributedLock;
+import org.hyl.cloud.common.util.DistributedLockHandler;
+import org.hyl.cloud.common.util.Lock;
+import org.hyl.cloud.common.util.redisson.AquiredLockWorker;
+import org.hyl.cloud.common.util.redisson.DistributedLocker;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.cloud.context.config.annotation.RefreshScope;
@@ -16,6 +19,8 @@ public class HelloController {
     private int port;
     @Autowired
     private DistributedLockHandler distributedLockHandler;
+    @Autowired
+    private DistributedLocker distributedLocker;
 
 
     @RequestMapping("index")
@@ -38,4 +43,37 @@ public class HelloController {
         }
         return "hello world!";
     }
+
+    @RequestMapping("redlock")
+    public String redlock()throws Exception{
+        distributedLocker.lock("test",new AquiredLockWorker<Object>() {
+
+            @Override
+            public Object invokeAfterLockAquire() {
+                try {
+                    System.out.println("执行方法！");
+                    Thread.sleep(5000);
+                }catch (Exception e){
+                    e.printStackTrace();
+                }
+                return null;
+            }
+
+        });
+        return "hello world!";
+    }
+
+    @RequestMapping("zookeeperlock")
+    public String zookeeperlock()throws Exception{
+//        DistributedLock lock   = new DistributedLock("localhost:2181","lock");
+//        lock.lock();
+//        //共享资源
+//        if(lock != null){
+//            System.out.println("执行方法");
+//            Thread.sleep(5000);
+//            lock.unlock();
+//        }
+        return "hello world!";
+    }
+}
 }
