@@ -1,10 +1,23 @@
-# springboot 2.0.5.RELEASE + spring-cloud Finchley版本 + Mysql8.0.11 + MyBatis + Atomikos 分布式事务
+# springboot 2.2.5.RELEASE + spring-cloud Hoxton版本 + Mysql8.0 + MyBatis + Atomikos 分布式事务
 # spring-cloud 实现功能：
-	注册中心 端口-8888 应用名称-register
-	服务提供者 端口-8763 应用名称-client
-	服务网关 端口-8080 应用名称-gateway
-	Feign声明式HTTP客户端 端口-8081 应用名称-feign
-	熔断器 在feign模块下
-	配置中心 端口-8101 应用名称-config
-	消息总线 配置在client、config模块下
-	服务链路追踪 配置在client、gateway模块下
+```
+├─spring-cloud----------------------------父项目，公共依赖
+│  │
+│  ├─eureka--------------------------微服务注册中心
+│  │
+│  ├─config-----------------------微服务配置中心
+│  │
+│  ├─config-file-----------------------配置文件
+│  │
+│  ├─gateway--------------------------微服务网关中心
+│  │
+│  ├─client
+│  │  │
+│  │  ├─index------------------业务内容
+│  │  │
+│  │  └─user------------------业务内容
+│  │
+│  ├─feign--------------------------远程调用api
+│  │
+│  └─common------------------工具类、多数据源配置
+```
